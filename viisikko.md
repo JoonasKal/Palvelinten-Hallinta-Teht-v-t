@@ -103,6 +103,6 @@ Ajoin komennon "sudo salt-call --local grains.items | less" joka listasi tietoa 
 
 ## Lähteet:
 
-https://terokarvinen.com/2024/configuration-management-2024-spring/ 29.3.2024
+https://terokarvinen.com/2024/configuration-management-2024-spring/ Luettu 29.3.2024
 
-https://terokarvinen.com/2021/salt-run-command-locally/ 29.3.2024
+https://terokarvinen.com/2021/salt-run-command-locally/ Luettu 29.3.2024
