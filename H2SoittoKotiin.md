@@ -54,6 +54,16 @@ Asensin orjalle apache2 serverin komennolla SUDO SALT '*' PKG.INSTALL APACHE2.
 
 ![apache](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/57087669-4e94-4ec3-8945-9f8268cc7742)
 
+# d) Idempotentti
+
+Ajoin masterilla komennon SUDO SALT '*' -L INFO STATE.SINGLE FILE.MANAGED /TMP/MOIKKA joka loi minionille tmp kansioon moikka tiedoston. Ajoin komennon uudestaa ja mitään ei muuttunut, joten se oli idempotentti. Menin myös minionille katsomaan ja löysin sieltä tmp kansionsta moikka tiedoston, joten komento onnistui.
+
+![kansio](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/914e52b9-c9cb-43f0-8c6b-a1963d604d9c)
+
+ ![löyty](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/b4a57eef-d778-4196-b099-ef2882c3c534)
+
+![idempo](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/6f21068a-eb52-45cd-a9b1-7a09c12d2949)
+
 
 # e) Grain
 
@@ -62,6 +72,19 @@ Keräsin orjasta tietoa SUDO SALT '*' GRAINS.ITEMS komennolla ja SUDO SALT '*' G
 ![grain](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/b77bed75-c43c-4bbf-9f07-f7e8f0f2864d)
 
 ![virtual](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/df3d36a5-6fc7-46f6-92f1-e1bd5c7803dd)
+
+# f) Infraa koodina
+
+Seuraavaksi tein infraa koodina. Tein hello kansion polkuun /srv/salt/hello komennolla SUDO MKDIR -P /SRV/SALT/HELLO/ ja siirryin sinne, siellä tein SUDOEDIT INIT.SLS komennolla init tiedoston, ajoin hello koodin SUDO SALT '*' STATE:APPLY HELLO komennolla ja se näytti onnistuvan. Seuraavaksi menin minionille katsomaan ja löysin tiedoston eli tämä onnistui.
+
+![alku](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/19adbbe8-eee9-4874-acfa-6d7ad0ed6d6d)
+
+![init](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/ba4c473e-2fcb-4934-9a21-05783abca0db)
+
+![applyhello](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/b453e5a9-74f0-46ce-97a6-843d068a6538)
+
+![löyty](https://github.com/JoonasKal/Palvelinten-Hallinta-Tehtvt/assets/104196551/2577bf4e-dc5b-4db2-a319-89da5b293372)
+
 
 
 # Lähteet: 
